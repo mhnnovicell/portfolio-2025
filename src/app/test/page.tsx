@@ -59,9 +59,9 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             className='font-[family-name:var(--font-geist-mono)] font-bold text-lg'
           >
-            <span className='text-white'>dev</span>
+            <span className='text-white'>mikkelraev</span>
             <span className='text-purple-500'>.</span>
-            <span className='text-gray-400'>portfolio</span>
+            <span className='text-gray-400'>dk</span>
           </motion.div>
 
           {/* Desktop Navigation */}
