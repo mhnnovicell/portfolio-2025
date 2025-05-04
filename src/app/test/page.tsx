@@ -60,7 +60,7 @@ export default function Home() {
             className='font-[family-name:var(--font-geist-mono)] font-bold text-lg'
           >
             <span className='text-white'>mikkelraev</span>
-            <span className='text-purple-500'>.</span>
+            <span className='text-fuchsia-500'>.</span>
             <span className='text-gray-400'>dk</span>
           </motion.div>
 
@@ -141,7 +141,7 @@ export default function Home() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className='text-5xl md:text-7xl font-bold mb-6'
           >
-            Creative Developer<span className='text-purple-500'>.</span>
+            Creative Developer<span className='text-fuchsia-500'>.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -161,14 +161,14 @@ export default function Home() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='bg-purple-600 hover:bg-purple-700 text-white rounded-md px-8 py-3 font-medium transition-colors'
+              className='bg-fuchsia-600 hover:bg-fuchsia-700 text-white rounded-md px-8 py-3 font-medium transition-colors'
             >
               View Projects
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className='bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-900/20 rounded-md px-8 py-3 font-medium transition-colors'
+              className='bg-transparent border border-fuchsia-500 text-fuchsia-500 hover:bg-fuchsia-900/20 rounded-md px-8 py-3 font-medium transition-colors'
             >
               Contact Me
             </motion.button>
@@ -186,7 +186,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-12 text-center'
           >
-            My <span className='text-purple-500'>Work</span>
+            My Work<span className='text-fuchsia-500'>.</span>
           </motion.h2>
 
           <motion.div
@@ -202,9 +202,9 @@ export default function Home() {
               whileHover={{ y: -5 }}
               className='md:col-span-2 md:row-span-2 bg-zinc-900 rounded-xl p-6 overflow-hidden group relative'
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='absolute inset-0 bg-gradient-to-br from-fuchsia-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
               <div className='h-48 md:h-64 bg-zinc-800 rounded-lg mb-4 overflow-hidden'>
-                <div className='w-full h-full bg-gradient-to-br from-purple-600/40 to-blue-600/40'></div>
+                <div className='w-full h-full bg-gradient-to-br from-fuchsia-600/40 to-blue-600/40'></div>
               </div>
               <h3 className='text-xl font-bold mb-2'>Featured Project</h3>
               <p className='text-gray-400'>
@@ -229,7 +229,7 @@ export default function Home() {
               whileHover={{ y: -5 }}
               className='bg-zinc-900 rounded-xl p-6 overflow-hidden group relative'
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='absolute inset-0 bg-gradient-to-br from-fuchsia-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
               <div className='h-32 bg-zinc-800 rounded-lg mb-4 overflow-hidden'>
                 <div className='w-full h-full bg-gradient-to-br from-indigo-600/40 to-fuchsia-600/40'></div>
               </div>
@@ -245,9 +245,9 @@ export default function Home() {
               whileHover={{ y: -5 }}
               className='bg-zinc-900 rounded-xl p-6 overflow-hidden group relative'
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='absolute inset-0 bg-gradient-to-br from-fuchsia-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
               <div className='h-32 bg-zinc-800 rounded-lg mb-4 overflow-hidden'>
-                <div className='w-full h-full bg-gradient-to-br from-pink-600/40 to-purple-600/40'></div>
+                <div className='w-full h-full bg-gradient-to-br from-pink-600/40 to-fuchsia-600/40'></div>
               </div>
               <h3 className='text-lg font-bold mb-2'>API Integration</h3>
               <p className='text-gray-400'>
@@ -261,7 +261,7 @@ export default function Home() {
               whileHover={{ y: -5 }}
               className='md:col-span-2 bg-zinc-900 rounded-xl p-6 overflow-hidden group relative'
             >
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              <div className='absolute inset-0 bg-gradient-to-br from-fuchsia-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
               <div className='h-32 bg-zinc-800 rounded-lg mb-4 overflow-hidden'>
                 <div className='w-full h-full bg-gradient-to-br from-blue-600/40 to-cyan-600/40'></div>
               </div>
@@ -285,7 +285,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-8 text-center'
           >
-            About <span className='text-purple-500'>Me</span>
+            About <span className='text-fuchsia-500'>Me</span>
           </motion.h2>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -295,10 +295,10 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className='aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/30 to-indigo-600/30'>
+              <div className='aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-fuchsia-500/30 to-indigo-600/30'>
                 <div className='absolute inset-2 bg-zinc-900 rounded-xl overflow-hidden'>
                   {/* Replace with your image */}
-                  <div className='w-full h-full bg-gradient-to-br from-purple-600/40 to-indigo-600/40 flex items-center justify-center'>
+                  <div className='w-full h-full bg-gradient-to-br from-fuchsia-600/40 to-indigo-600/40 flex items-center justify-center'>
                     <span className='text-6xl'>👨‍💻</span>
                   </div>
                 </div>
@@ -343,7 +343,7 @@ export default function Home() {
                       key={skill}
                       variants={item}
                       whileHover={{ scale: 1.1 }}
-                      className='px-4 py-2 bg-zinc-800 rounded-full text-sm font-medium border border-purple-500/20 hover:border-purple-500/50 transition-colors'
+                      className='px-4 py-2 bg-zinc-800 rounded-full text-sm font-medium border border-fuchsia-500/20 hover:border-fuchsia-500/50 transition-colors'
                     >
                       {skill}
                     </motion.span>
@@ -365,7 +365,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-16 text-center'
           >
-            My <span className='text-purple-500'>Journey</span>
+            My <span className='text-fuchsia-500'>Journey</span>
           </motion.h2>
 
           <div className='relative'>
@@ -407,7 +407,7 @@ export default function Home() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className='absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-purple-600 border-4 border-zinc-900 transform translate-x-[-10px] md:translate-x-[-12px]'></div>
+                <div className='absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-fuchsia-600 border-4 border-zinc-900 transform translate-x-[-10px] md:translate-x-[-12px]'></div>
 
                 {/* Content */}
                 <div
@@ -415,7 +415,7 @@ export default function Home() {
                     i % 2 === 0 ? 'md:text-right' : ''
                   }`}
                 >
-                  <div className='inline-block px-3 py-1 mb-3 bg-purple-900/30 rounded-full text-purple-400 text-sm font-medium'>
+                  <div className='inline-block px-3 py-1 mb-3 bg-fuchsia-900/30 rounded-full text-fuchsia-400 text-sm font-medium'>
                     {experience.year}
                   </div>
                   <h3 className='text-xl font-bold'>{experience.role}</h3>
@@ -443,7 +443,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-16 text-center'
           >
-            What I <span className='text-purple-500'>Do</span>
+            What I <span className='text-fuchsia-500'>Do</span>
           </motion.h2>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -492,7 +492,7 @@ export default function Home() {
                 whileInView='show'
                 viewport={{ once: true, margin: '-50px' }}
                 whileHover={{ y: -8 }}
-                className='bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:border-purple-500/40'
+                className='bg-zinc-900 border border-zinc-800 rounded-xl p-6 flex flex-col h-full transition-all duration-300 hover:border-fuchsia-500/40'
               >
                 <div className='text-4xl mb-4'>{service.icon}</div>
                 <h3 className='text-xl font-bold mb-2'>{service.title}</h3>
@@ -513,7 +513,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-16 text-center'
           >
-            Client <span className='text-purple-500'>Testimonials</span>
+            Client <span className='text-fuchsia-500'>Testimonials</span>
           </motion.h2>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -552,7 +552,7 @@ export default function Home() {
                 className='bg-zinc-900 p-6 rounded-xl border border-zinc-800'
               >
                 <div className='flex items-center gap-4 mb-4'>
-                  <div className='w-12 h-12 rounded-full overflow-hidden bg-purple-800 flex items-center justify-center text-xl font-bold'>
+                  <div className='w-12 h-12 rounded-full overflow-hidden bg-fuchsia-800 flex items-center justify-center text-xl font-bold'>
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
@@ -580,7 +580,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className='text-3xl md:text-4xl font-bold mb-8 text-center'
           >
-            Get In <span className='text-purple-500'>Touch</span>
+            Get In <span className='text-fuchsia-500'>Touch</span>
           </motion.h2>
 
           <motion.p
@@ -614,7 +614,7 @@ export default function Home() {
                 type='text'
                 id='name'
                 placeholder='Your name'
-                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-purple-500 transition-colors'
+                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-fuchsia-500 transition-colors'
                 required
               />
             </div>
@@ -627,7 +627,7 @@ export default function Home() {
                 type='email'
                 id='email'
                 placeholder='your.email@example.com'
-                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-purple-500 transition-colors'
+                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-fuchsia-500 transition-colors'
                 required
               />
             </div>
@@ -640,7 +640,7 @@ export default function Home() {
                 id='message'
                 placeholder='Tell me about your project...'
                 rows={5}
-                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-purple-500 transition-colors resize-none'
+                className='bg-zinc-900 border border-zinc-800 text-white p-3 rounded-md focus:outline-none focus:border-fuchsia-500 transition-colors resize-none'
                 required
               />
             </div>
@@ -648,7 +648,7 @@ export default function Home() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className='md:col-span-2 bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-md transition-colors'
+              className='md:col-span-2 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-medium py-3 px-6 rounded-md transition-colors'
               type='submit'
             >
               Send Message
@@ -677,19 +677,19 @@ export default function Home() {
           >
             <a
               href='#'
-              className='text-gray-400 hover:text-purple-500 transition-colors'
+              className='text-gray-400 hover:text-fuchsia-500 transition-colors'
             >
               GitHub
             </a>
             <a
               href='#'
-              className='text-gray-400 hover:text-purple-500 transition-colors'
+              className='text-gray-400 hover:text-fuchsia-500 transition-colors'
             >
               LinkedIn
             </a>
             <a
               href='#'
-              className='text-gray-400 hover:text-purple-500 transition-colors'
+              className='text-gray-400 hover:text-fuchsia-500 transition-colors'
             >
               Twitter
             </a>
