@@ -299,58 +299,196 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section className='px-6 sm:px-8 md:px-16 lg:px-24 py-24 bg-zinc-950 relative'>
+      {/* About Me Section */}
+      <section className='px-6 sm:px-8 md:px-16 lg:px-24 py-32 bg-zinc-950 relative'>
+        {/* Enhanced background elements with animations */}
         <div className='absolute bottom-0 left-0 -z-10 overflow-hidden'>
-          <div className='w-[600px] h-[600px] rounded-full bg-fuchsia-950/30 blur-[150px]' />
+          <motion.div
+            className='w-[700px] h-[700px] rounded-full bg-fuchsia-950/30 blur-[180px]'
+            animate={{
+              opacity: [0.2, 0.3, 0.2],
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              repeatType: 'reverse',
+            }}
+          />
         </div>
+        <motion.div
+          className='absolute top-1/3 right-0 w-96 h-96 rounded-full bg-indigo-900/10 blur-[120px] -z-10'
+          animate={{
+            x: [0, 30, 0],
+            opacity: [0.1, 0.15, 0.1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            repeatType: 'mirror',
+          }}
+        />
+
         <div className='max-w-6xl mx-auto'>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-3xl md:text-4xl font-bold mb-8 text-center'
+            className='text-3xl md:text-5xl font-bold mb-16 text-center'
           >
             About{' '}
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-fuchsia-400'>
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-fuchsia-400 relative'>
               Me
+              {/* Animated underline */}
+              <motion.span
+                className='absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-fuchsia-500/80 to-transparent rounded-full'
+                initial={{ width: 0, left: '50%' }}
+                whileInView={{ width: '100%', left: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
             </span>
           </motion.h2>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+            {/* Enhanced Profile Image */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1 }}
+              className='relative'
             >
-              <div className='aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-fuchsia-500/30 to-indigo-600/30'>
-                <div className='absolute inset-2 bg-zinc-900 rounded-xl overflow-hidden'>
-                  {/* Replace with your image */}
-                  <div className='w-full h-full bg-gradient-to-br from-fuchsia-600/40 to-indigo-600/40 flex items-center justify-center'>
-                    <span className='text-6xl'>👨‍💻</span>
+              <div className='aspect-square relative rounded-2xl overflow-hidden bg-gradient-to-br from-fuchsia-500/30 to-indigo-600/30 p-1 shadow-lg shadow-fuchsia-900/10'>
+                {/* Animated border gradient */}
+                <motion.div
+                  className='absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 via-purple-500/30 to-fuchsia-500/30 rounded-2xl z-0 opacity-70'
+                  animate={{
+                    background: [
+                      'linear-gradient(90deg, rgba(217,70,239,0.3) 0%, rgba(168,85,247,0.3) 50%, rgba(217,70,239,0.3) 100%)',
+                      'linear-gradient(180deg, rgba(217,70,239,0.3) 0%, rgba(168,85,247,0.3) 50%, rgba(217,70,239,0.3) 100%)',
+                      'linear-gradient(270deg, rgba(217,70,239,0.3) 0%, rgba(168,85,247,0.3) 50%, rgba(217,70,239,0.3) 100%)',
+                      'linear-gradient(0deg, rgba(217,70,239,0.3) 0%, rgba(168,85,247,0.3) 50%, rgba(217,70,239,0.3) 100%)',
+                      'linear-gradient(90deg, rgba(217,70,239,0.3) 0%, rgba(168,85,247,0.3) 50%, rgba(217,70,239,0.3) 100%)',
+                    ],
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                />
+
+                <div className='absolute inset-[3px] bg-zinc-900 rounded-xl overflow-hidden backdrop-blur-sm z-10'>
+                  <div className='w-full h-full bg-gradient-to-br from-fuchsia-600/30 to-indigo-600/30 flex items-center justify-center relative group'>
+                    {/* Animated glow on profile photo */}
+                    <motion.div
+                      className='absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700'
+                      animate={{
+                        boxShadow: [
+                          'inset 0 0 50px rgba(217,70,239,0.1)',
+                          'inset 0 0 80px rgba(217,70,239,0.2)',
+                          'inset 0 0 50px rgba(217,70,239,0.1)',
+                        ],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                      }}
+                    />
+
+                    <motion.span
+                      className='text-7xl sm:text-8xl z-20'
+                      whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      👨‍💻
+                    </motion.span>
+
+                    {/* Decorative code elements */}
+                    <div className='absolute top-6 left-6 text-fuchsia-500/20 font-mono text-xs z-10'>
+                      &lt;code&gt;
+                    </div>
+                    <div className='absolute bottom-6 right-6 text-fuchsia-500/20 font-mono text-xs z-10'>
+                      &lt;/code&gt;
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* Corner accent */}
+              <motion.div
+                className='absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-gradient-to-br from-fuchsia-500/20 to-indigo-500/20 blur-xl -z-10'
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.4, 0.6, 0.4],
+                }}
+                transition={{ duration: 5, repeat: Infinity }}
+              />
             </motion.div>
 
+            {/* About Text Content with enhanced animations */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className='flex flex-col gap-6'
+              transition={{ duration: 1 }}
+              className='flex flex-col gap-7'
             >
-              <h3 className='text-2xl font-bold'>Full Stack Developer</h3>
-              <p className='text-gray-300'>
-                I'm a passionate developer with expertise in building modern web
-                applications. With 5+ years of experience, I specialize in
-                crafting responsive, user-friendly interfaces with a focus on
-                performance and accessibility.
-              </p>
+              <div className='space-y-3'>
+                <motion.div
+                  className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 text-fuchsia-300 text-sm font-medium border border-fuchsia-500/20 mb-3'
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                >
+                  <span className='w-1.5 h-1.5 rounded-full bg-fuchsia-400 animate-pulse'></span>
+                  Full Stack Developer
+                </motion.div>
 
-              <div className='mt-4'>
-                <h4 className='text-xl font-medium mb-4'>My Skills</h4>
+                <motion.h3
+                  className='text-2xl md:text-3xl font-bold text-white'
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                  Building{' '}
+                  <span className='text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-fuchsia-500'>
+                    digital experiences
+                  </span>{' '}
+                  that make an impact
+                </motion.h3>
+
+                <motion.p
+                  className='text-gray-300 text-lg leading-relaxed'
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
+                  I'm a passionate developer with expertise in building modern
+                  web applications. With 5+ years of experience, I specialize in
+                  crafting responsive, user-friendly interfaces with a focus on
+                  performance and accessibility.
+                </motion.p>
+              </div>
+
+              <div className='mt-6'>
+                <motion.h4
+                  className='text-xl font-semibold mb-5 flex items-center gap-2'
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                >
+                  <div className='h-px flex-1 max-w-[40px] bg-gradient-to-r from-fuchsia-500 to-transparent'></div>
+                  My Skills
+                </motion.h4>
+
                 <motion.div
                   className='flex flex-wrap gap-3'
                   variants={container}
@@ -359,50 +497,110 @@ export default function Home() {
                   viewport={{ once: true }}
                 >
                   {[
-                    'React',
-                    'Next.js',
-                    'TypeScript',
-                    'Tailwind CSS',
-                    'Framer Motion',
-                    'Node.js',
-                    'GraphQL',
-                    'Jest',
+                    { name: 'React', color: 'blue' },
+                    { name: 'Next.js', color: 'zinc' },
+                    { name: 'TypeScript', color: 'indigo' },
+                    { name: 'Tailwind CSS', color: 'cyan' },
+                    { name: 'Framer Motion', color: 'fuchsia' },
+                    { name: 'Node.js', color: 'green' },
+                    { name: 'GraphQL', color: 'pink' },
+                    { name: 'Jest', color: 'amber' },
                   ].map((skill, i) => (
                     <motion.span
-                      key={skill}
+                      key={skill.name}
                       variants={item}
                       whileHover={{
                         scale: 1.1,
-                        backgroundColor: 'rgba(217, 70, 239, 0.2)',
+                        backgroundColor:
+                          skill.color === 'fuchsia'
+                            ? 'rgba(217, 70, 239, 0.2)'
+                            : undefined,
                       }}
-                      className='px-4 py-2 bg-zinc-800/70 backdrop-blur-sm rounded-full text-sm font-medium border border-zinc-700/30 hover:border-fuchsia-500/50 transition-all duration-300'
+                      className={`px-4 py-2 bg-zinc-800/70 backdrop-blur-sm rounded-full text-sm font-medium border border-zinc-700/30 hover:border-fuchsia-500/50 transition-all duration-300 flex items-center gap-1.5`}
                     >
-                      {skill}
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full bg-${skill.color}-400`}
+                      ></span>
+                      {skill.name}
                     </motion.span>
                   ))}
                 </motion.div>
               </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className='mt-6'
+              >
+                <a
+                  href='#contact'
+                  className='inline-flex items-center gap-2 text-fuchsia-400 font-medium group'
+                >
+                  <span>Contact me</span>
+                  <motion.span
+                    className='text-sm transition-transform duration-300 group-hover:translate-x-1'
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      repeatDelay: 2,
+                    }}
+                  >
+                    →
+                  </motion.span>
+                </a>
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Experience Timeline Section */}
-      <section className='px-6 sm:px-8 md:px-16 lg:px-24 py-24'>
-        <div className='max-w-4xl mx-auto'>
+      {/* Experience Timeline Section */}
+      <section className='px-6 sm:px-8 md:px-16 lg:px-24 py-32 relative overflow-hidden'>
+        {/* Background accent elements */}
+        <div className='absolute top-40 right-20 -z-10 overflow-hidden opacity-20'>
+          <div className='w-[400px] h-[400px] rounded-full bg-fuchsia-700/30 blur-[130px]' />
+        </div>
+        <div className='absolute bottom-0 left-0 -z-10 overflow-hidden opacity-10'>
+          <div className='w-[300px] h-[300px] rounded-full bg-indigo-600/20 blur-[100px]' />
+        </div>
+
+        <div className='max-w-5xl mx-auto'>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className='text-3xl md:text-4xl font-bold mb-16 text-center'
+            className='text-3xl md:text-5xl font-bold mb-20 text-center'
           >
-            My <span className='text-fuchsia-500'>Journey</span>
+            My{' '}
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-fuchsia-400 relative'>
+              Journey
+              {/* Animated underline */}
+              <motion.span
+                className='absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-fuchsia-500/80 to-transparent rounded-full'
+                initial={{ width: 0, left: '50%' }}
+                whileInView={{ width: '100%', left: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+            </span>
           </motion.h2>
 
           <div className='relative'>
-            {/* Timeline Line */}
-            <div className='absolute left-0 md:left-1/2 h-full w-px bg-gradient-to-b from-transparent via-fuchsia-500/40 to-transparent transform md:translate-x-[-0.5px]'></div>
+            {/* Timeline Line - animated glow effect */}
+            <motion.div
+              className='absolute left-0 md:left-1/2 h-full w-[2px] bg-gradient-to-b from-transparent via-fuchsia-500/60 to-transparent transform md:translate-x-[-1px] z-0'
+              initial={{ height: 0, opacity: 0 }}
+              whileInView={{ height: '100%', opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
+              <div className='absolute inset-0 blur-sm bg-fuchsia-400/30' />
+            </motion.div>
 
             {/* Timeline Items */}
             {[
@@ -412,6 +610,8 @@ export default function Home() {
                 company: 'Tech Innovators',
                 description:
                   'Leading development of next-generation web applications.',
+                icon: '🚀',
+                gradient: 'from-fuchsia-600/20 to-purple-600/20',
               },
               {
                 year: '2020 - 2023',
@@ -419,6 +619,8 @@ export default function Home() {
                 company: 'Digital Solutions Inc.',
                 description:
                   'Developed robust backend services and responsive frontends.',
+                icon: '⚛️',
+                gradient: 'from-indigo-600/20 to-blue-600/20',
               },
               {
                 year: '2018 - 2020',
@@ -426,37 +628,126 @@ export default function Home() {
                 company: 'Creative Web Agency',
                 description:
                   'Created engaging user interfaces and interactive experiences.',
+                icon: '🎨',
+                gradient: 'from-blue-600/20 to-cyan-600/20',
               },
             ].map((experience, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-                className={`relative flex flex-col md:flex-row items-center md:items-start gap-8 mb-16 last:mb-0 ${
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.8, delay: i * 0.2 }}
+                className={`relative flex flex-col md:flex-row items-center md:items-start gap-10 mb-20 last:mb-0 ${
                   i % 2 === 0 ? 'md:justify-end' : ''
                 }`}
               >
-                {/* Timeline Dot */}
-                <div className='absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 border-4 border-zinc-900 transform translate-x-[-10px] md:translate-x-[-12px] shadow-[0_0_10px_rgba(217,70,239,0.5)]'></div>
-                {/* Content */}
-                <div
-                  className={`w-full md:w-[calc(50%-20px)] p-6 bg-zinc-900 rounded-xl border border-zinc-800 ${
+                {/* Animated Timeline Dot with pulse effect */}
+                <motion.div
+                  className='absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 border-4 border-zinc-950 transform translate-x-[-14px] md:translate-x-[-16px] z-10 flex items-center justify-center text-xs'
+                  whileInView={{
+                    boxShadow: [
+                      '0 0 0px rgba(217,70,239,0.5)',
+                      '0 0 15px rgba(217,70,239,0.8)',
+                      '0 0 5px rgba(217,70,239,0.5)',
+                    ],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: 'reverse',
+                  }}
+                >
+                  {/* Icon inside dot */}
+                  <span className='opacity-80'>{experience.icon}</span>
+
+                  {/* Pulse effect */}
+                  <motion.div
+                    className='absolute inset-0 rounded-full bg-fuchsia-400/30 z-[-1]'
+                    animate={{
+                      scale: [1, 1.4, 1],
+                      opacity: [0.5, 0.2, 0.5],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                </motion.div>
+
+                {/* Content Card */}
+                <motion.div
+                  whileHover={{
+                    y: -5,
+                    boxShadow: '0 15px 30px -10px rgba(217, 70, 239, 0.15)',
+                  }}
+                  className={`w-full md:w-[calc(50%-30px)] p-7 bg-zinc-900/90 backdrop-blur-sm rounded-xl border border-zinc-800/80 relative group overflow-hidden ${
                     i % 2 === 0 ? 'md:text-right' : ''
                   }`}
                 >
-                  <div className='inline-block px-3 py-1 mb-3 bg-fuchsia-900/30 rounded-full text-fuchsia-400 text-sm font-medium'>
+                  {/* Gradient background */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${experience.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500`}
+                  ></div>
+
+                  {/* Year badge with subtle glow */}
+                  <div
+                    className={`inline-block px-4 py-1.5 mb-4 bg-fuchsia-900/40 backdrop-blur-md rounded-full text-fuchsia-300 text-sm font-medium border border-fuchsia-500/20 group-hover:border-fuchsia-500/40 transition-colors duration-300 shadow-inner shadow-fuchsia-900/50 ${
+                      i % 2 === 0 ? 'md:ml-auto' : ''
+                    }`}
+                  >
                     {experience.year}
                   </div>
-                  <h3 className='text-xl font-bold'>{experience.role}</h3>
-                  <h4 className='text-gray-400 mb-3'>{experience.company}</h4>
-                  <p className='text-gray-300'>{experience.description}</p>
-                </div>
+
+                  <motion.h3
+                    className='text-xl md:text-2xl font-bold mb-1 text-white'
+                    whileInView={{
+                      textShadow:
+                        i % 2 === 0
+                          ? [
+                              '0 0 0px rgba(217,70,239,0)',
+                              '0 0 8px rgba(217,70,239,0.3)',
+                              '0 0 0px rgba(217,70,239,0)',
+                            ]
+                          : [
+                              '0 0 0px rgba(217,70,239,0)',
+                              '0 0 8px rgba(217,70,239,0.3)',
+                              '0 0 0px rgba(217,70,239,0)',
+                            ],
+                    }}
+                    transition={{
+                      delay: i * 0.3,
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatDelay: 5,
+                    }}
+                  >
+                    {experience.role}
+                  </motion.h3>
+
+                  <h4 className='text-gray-300 font-medium mb-3'>
+                    {experience.company}
+                  </h4>
+                  <p className='text-gray-400 group-hover:text-gray-300 transition-colors duration-300'>
+                    {experience.description}
+                  </p>
+
+                  {/* Bottom border accent */}
+                  <motion.div
+                    className={`absolute bottom-0 ${
+                      i % 2 === 0 ? 'right-0' : 'left-0'
+                    } h-1 w-0 bg-gradient-to-r from-fuchsia-500 to-fuchsia-400/30 group-hover:w-full transition-all duration-500 ease-out`}
+                    initial={{ width: '0%' }}
+                    whileInView={{ width: '30%' }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5, duration: 0.8 }}
+                  />
+                </motion.div>
 
                 {/* Spacer for alternate layout */}
                 {i % 2 === 1 && (
-                  <div className='hidden md:block w-[calc(50%-20px)]'></div>
+                  <div className='hidden md:block w-[calc(50%-30px)]'></div>
                 )}
               </motion.div>
             ))}
@@ -587,7 +878,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       {/* Testimonials Section */}
       <section className='px-6 sm:px-8 md:px-16 lg:px-24 py-24 bg-zinc-950 relative overflow-hidden'>
         {/* Background elements */}
