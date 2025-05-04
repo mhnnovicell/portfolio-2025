@@ -311,7 +311,7 @@ export default function Home() {
             }}
             transition={{
               duration: 8,
-              repeat: Infinity,
+              repeat: 1,
               repeatType: 'reverse',
             }}
           />
@@ -324,7 +324,7 @@ export default function Home() {
           }}
           transition={{
             duration: 12,
-            repeat: Infinity,
+            repeat: 1,
             repeatType: 'mirror',
           }}
         />
@@ -375,7 +375,7 @@ export default function Home() {
                   }}
                   transition={{
                     duration: 10,
-                    repeat: Infinity,
+                    repeat: 1,
                     ease: 'linear',
                   }}
                 />
@@ -394,7 +394,7 @@ export default function Home() {
                       }}
                       transition={{
                         duration: 3,
-                        repeat: Infinity,
+                        repeat: 3,
                         repeatType: 'reverse',
                       }}
                     />
@@ -425,7 +425,7 @@ export default function Home() {
                   scale: [1, 1.2, 1],
                   opacity: [0.4, 0.6, 0.4],
                 }}
-                transition={{ duration: 5, repeat: Infinity }}
+                transition={{ duration: 5, repeat: 1 }}
               />
             </motion.div>
 
@@ -544,7 +544,7 @@ export default function Home() {
                     animate={{ x: [0, 4, 0] }}
                     transition={{
                       duration: 1.5,
-                      repeat: Infinity,
+                      repeat: 1,
                       repeatDelay: 2,
                     }}
                   >
@@ -654,7 +654,7 @@ export default function Home() {
                   }}
                   transition={{
                     duration: 2,
-                    repeat: Infinity,
+                    repeat: 1,
                     repeatType: 'reverse',
                   }}
                 >
@@ -670,7 +670,7 @@ export default function Home() {
                     }}
                     transition={{
                       duration: 2.5,
-                      repeat: Infinity,
+                      repeat: 1,
                       ease: 'easeInOut',
                     }}
                   />
@@ -719,7 +719,7 @@ export default function Home() {
                     transition={{
                       delay: i * 0.3,
                       duration: 2,
-                      repeat: Infinity,
+                      repeat: 1,
                       repeatDelay: 5,
                     }}
                   >
@@ -851,7 +851,7 @@ export default function Home() {
                       scale: [1, 1.05, 1],
                     }}
                     transition={{
-                      repeat: Infinity,
+                      repeat: 1,
                       duration: 3,
                       ease: 'easeInOut',
                     }}
@@ -892,7 +892,7 @@ export default function Home() {
           }}
           transition={{
             duration: 15,
-            repeat: Infinity,
+            repeat: 1,
             repeatType: 'reverse',
           }}
         />
@@ -1000,7 +1000,7 @@ export default function Home() {
                     <motion.div
                       className={`absolute -inset-1 rounded-full bg-gradient-to-r from-fuchsia-500/40 to-${testimonial.color}-500/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}
                       animate={{ scale: [0.9, 1.1, 0.9] }}
-                      transition={{ duration: 4, repeat: Infinity }}
+                      transition={{ duration: 4, repeat: 1 }}
                     />
                   </div>
                   <div>
